@@ -6,4 +6,7 @@ export default class Block {
     this.nonce = 0;
     this.transactions = [];
   }
+  addTransaction(trasaction) {
+    this.transactions.push(trasaction);
+  }
 }
