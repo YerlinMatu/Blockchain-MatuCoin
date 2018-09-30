@@ -1,9 +1,10 @@
 const Block = require('./block');
-const sha256 = require('js-sha265');
+const sha256 = require('js-sha256');
 
-export default class Blockchain {
+class Blockchain {
   constructor(genesis) {
     this.blocks = [];
+    this.addBlock(genesis);
   }
 
   addBlock(block) {
@@ -17,14 +18,20 @@ export default class Blockchain {
   getNextBlock(transactions) {
     const block = new Block();
     transactions.map(transaction => block.addTransaction(transaction));
+
+    const previousBlock = this.getPreviousBlock();
+    block.index = this.blocks.length;
+    block.previousHash = previousBlock.hash;
+    block.hash = this.generateHash(block);
+    return block;
   }
 
   generateHash(block) {
     let hash = sha256(block.key);
-    while (!hash.startWith('0000')) {
+    while (!hash.startsWith('0000')) {
       block.nonce += 1;
       hash = sha256(block.key);
-      console.log(hash); 
+      console.log(hash);
     }
     return hash;
   }
@@ -33,3 +40,5 @@ export default class Blockchain {
     return this.blocks[this.blocks.length -1];
   }
 }
+
+module.exports = Blockchain;
