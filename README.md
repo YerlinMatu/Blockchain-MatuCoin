@@ -16,6 +16,4 @@
 
 5. transactions: una lista de transacciones agregadas al bloque.
 
-<p>La propiedad clave es una propiedad getter en la clase Block como se muestra a continuación: </p>
-
 <strong>Blockchain:</strong> Un blockchain representa la lista de bloques enlazados. <br/> Una cadena de bloques es inmutable, lo que significa que una vez que el bloque se agrega a la cadena de bloques, no se puede modificar.
