@@ -9,4 +9,7 @@ export default class Block {
   addTransaction(trasaction) {
     this.transactions.push(trasaction);
   }
+  get key() {
+    return JSON.stringify(this.transactions) + this.index + this.previousHash + this.once;
+  }
 }
