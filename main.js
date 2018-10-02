@@ -7,7 +7,7 @@ const Blockchain = require('./models/blockchain');
 const genesisBlock = new Block();
 const blockchain = new Blockchain(genesisBlock);
 
-// Create transaction
+// Create transaction.
 
 const transaction = new Transaction('Yerlin', 'Jhanny', 100);
 const block = blockchain.getNextBlock([transaction]);
