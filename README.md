@@ -1,19 +1,18 @@
 # Blockchain-MatuCoin 💰
 
-<strong>Transaction:</strong> Una transacción representa una transferencia de valor. <br/> Esto puede ser dinero, mercancía, registros médicos, etc.
+<strong>Transaction:</strong> A transaction represents a transfer of value. <br/> This can be money, merchandise, medical records, and so on.
 
-<strong>Block:</strong> Un minero extrae un bloque que luego se llena de transacciones y se agrega a la cadena de bloques.
+<strong>Block:</strong> A miner extracts a block, which is then filled with transactions and added to the blockchain.
 
-<p>Un bloque se extrae en función de su clave que se compone de las siguientes propiedades:</p>
+<p>A block is extracted based on its key, which is composed of the following properties:</p>
+index: the current index of the block in the blockchain.
 
-1. index: el índice actual del bloque en la cadena de bloques.
+previousHash: the hash of the previous block in the blockchain.
 
-2. previousHash: el hash del bloque anterior en el blockchain.
+hash: the current hash of the block.
 
-3. hash: el hash actual del bloque.
+nonce: The magic number that is incremented to find the secret hash used to sign the block.
 
-4. nonce: El número mágico que se incrementa para encontrar el hash secreto que se usa para firmar el bloque.
+transactions: a list of transactions added to the block.
 
-5. transactions: una lista de transacciones agregadas al bloque.
-
-<strong>Blockchain:</strong> Un blockchain representa la lista de bloques enlazados. <br/> Una cadena de bloques es inmutable, lo que significa que una vez que el bloque se agrega a la cadena de bloques, no se puede modificar.
+<strong>Blockchain:</strong> A blockchain represents the list of linked blocks. <br/> A blockchain is immutable, which means that once the block is added to the blockchain, it cannot be modified.
